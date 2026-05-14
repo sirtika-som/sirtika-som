@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SIRTIKA Sales Operating Model — The ISE and Sales story before and after SOM. Internal Sales Executive and Pipeline Owner workflows.">
+<meta property="og:title" content="The ISE & Sales story — before and after SOM | SIRTIKA">
+<meta property="og:description" content="How the Sales Operating Model transforms the first 30 days and the typical week for ISE and Sales roles.">
+<meta property="og:type" content="article">
+<title>The ISE & Sales story — before and after SOM | SIRTIKA</title>
+<style>
+  /* ============ BRAND TOKENS ============ */
+  :root {
+    --carbon: #1A1A1A;
+    --cloud: #FFFFFF;
+    --navy: #1C3D5A;
+    --navy-deep: #142C42;
+    --gold: #B8860B;
+    --gold-bright: #D4A017;
+    --gold-pale: #FDF6E3;
+    --stone: #F5F5F5;
+    --slate: #333333;
+    --light-slate: #666666;
+    --without-bg: #FBEFEF;
+    --without-border: #C95757;
+    --card-border: #DDDDDD;
+    --divider: #E5E5E5;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    color: var(--carbon);
+    background: #F0F0F0;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ============ NAV BAR (sticky) ============ */
+  .topnav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--navy);
+    border-bottom: 3px solid var(--gold);
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .topnav .brand {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+  }
+  .topnav .brand .tag {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--cloud);
+    font-size: 0.75rem;
+    margin-left: 8px;
+    opacity: 0.9;
+  }
+  .topnav .nav-links {
+    display: flex;
+    gap: 20px;
+    font-size: 0.85rem;
+  }
+  .topnav .nav-links a {
+    color: var(--cloud);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  .topnav .nav-links a:hover {
+    background: rgba(255,255,255,0.1);
+  }
+  @media (max-width: 640px) {
+    .topnav .brand .tag { display: none; }
+    .topnav .nav-links { gap: 8px; }
+    .topnav .nav-links a { padding: 6px 8px; font-size: 0.8rem; }
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: var(--cloud);
+    padding: 64px 24px 56px;
+    text-align: center;
+  }
+  .hero .eyebrow {
+    display: inline-block;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    font-size: 0.78rem;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--gold);
+  }
+  .hero h1 {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    line-height: 1.2;
+    max-width: 920px;
+    margin: 0 auto 16px;
+  }
+  .hero .subtitle {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+    opacity: 0.92;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .hero .note {
+    margin-top: 28px;
+    padding: 14px 22px;
+    display: inline-block;
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    color: var(--gold);
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 0.92rem;
+    max-width: 800px;
+  }
+
+  /* ============ PAGE SECTIONS ============ */
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .section {
+    padding: 56px 0 32px;
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .section-header .label {
+    display: inline-block;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    font-size: 0.72rem;
+    margin-bottom: 10px;
+  }
+  .section-header h2 {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    color: var(--carbon);
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+  .section-header .role {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: var(--light-slate);
+    font-size: clamp(0.9rem, 1.4vw, 1rem);
+  }
+
+  /* ============ COMPARE GRID ============ */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  @media (min-width: 900px) {
+    .compare { grid-template-columns: 1fr 1.45fr; gap: 20px; }
+  }
+
+  /* QUAD CARD */
+  .quad {
+    background: var(--cloud);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(20, 44, 66, 0.08);
+    display: flex;
+    flex-direction: column;
+  }
+  .quad-header {
+    background: var(--navy);
+    color: var(--cloud);
+    padding: 14px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .quad-header .label {
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 1.2px;
+  }
+  .quad-header .phase {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 0.95rem;
+  }
+
+  /* WITHOUT QUAD */
+  .without .quad-body {
+    background: var(--without-bg);
+    padding: 24px 18px 18px;
+    min-height: 280px;
+    position: relative;
+  }
+  .chaos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+    align-items: flex-start;
+  }
+  .chaos-item {
+    background: var(--cloud);
+    border: 1.5px solid var(--without-border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--slate);
+    box-shadow: 0 1px 4px rgba(201,87,87,0.1);
+    flex: 0 0 auto;
+  }
+  /* Stagger the chaos items diagonally for visual chaos */
+  .chaos-grid .chaos-item:nth-child(odd) { transform: translateY(0); }
+  .chaos-grid .chaos-item:nth-child(even) { transform: translateY(12px); }
+  .chaos-grid .chaos-item:nth-child(3n) { transform: translateY(20px); }
+  .chaos-footnote {
+    margin-top: 24px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: var(--without-border);
+    font-size: 0.9rem;
+  }
+
+  /* WITH QUAD */
+  .with .quad-body {
+    padding: 18px;
+    background: var(--cloud);
+  }
+  .stages {
+    display: grid;
+    gap: 14px;
+  }
+  .stages-3 { grid-template-columns: 1fr; }
+  .stages-5 { grid-template-columns: 1fr; }
+  @media (min-width: 700px) {
+    .stages-3 { grid-template-columns: 1fr 1fr 1fr; }
+    .stages-5 { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 1100px) {
+    .stages-5 { grid-template-columns: repeat(5, 1fr); }
+  }
+  .stage {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .stage-header {
+    background: var(--gold-pale);
+    border-top: 3px solid var(--gold);
+    padding: 10px 8px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .stage-header .stage-label {
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: var(--navy);
+    letter-spacing: 0.8px;
+  }
+  .stage-header .stage-meta {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 0.72rem;
+    color: var(--light-slate);
+    margin-top: 2px;
+  }
+
+  /* CARD — number top-left, title, divider, ref bottom */
+  .card {
+    background: var(--cloud);
+    border: 1px solid var(--card-border);
+    border-left: 4px solid var(--navy);
+    border-radius: 4px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .card:hover {
+    box-shadow: 0 4px 14px rgba(20,44,66,0.12);
+    transform: translateY(-2px);
+  }
+  .card-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .card-num {
+    flex: 0 0 22px;
+    height: 22px;
+    background: var(--gold);
+    color: var(--cloud);
+    font-weight: 800;
+    font-size: 0.82rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+  .card-title {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--carbon);
+    line-height: 1.35;
+    flex: 1;
+  }
+  .card-divider {
+    height: 1px;
+    background: var(--divider);
+    margin: auto 0 8px;
+  }
+  .card-ref {
+    font-size: 0.72rem;
+    color: var(--light-slate);
+    line-height: 1.3;
+  }
+  .card-ref .ref-code {
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+
+  /* ============ DIVIDER BETWEEN PAGES ============ */
+  .page-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 24px 0;
+    opacity: 0.6;
+  }
+
+  /* ============ LEGEND ============ */
+  .legend {
+    background: var(--cloud);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 24px;
+    margin: 32px 0;
+  }
+  .legend h3 {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    color: var(--carbon);
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+  }
+  .legend p {
+    color: var(--light-slate);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .legend p strong {
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* ============ CTA ============ */
+  .cta {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: var(--cloud);
+    padding: 56px 24px;
+    text-align: center;
+    margin-top: 48px;
+  }
+  .cta h2 {
+    font-family: 'Georgia', serif;
+    font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+    margin-bottom: 14px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.3;
+  }
+  .cta p {
+    opacity: 0.88;
+    max-width: 620px;
+    margin: 0 auto 28px;
+    font-size: 0.98rem;
+  }
+  .cta .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--gold);
+    color: var(--carbon);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .cta .btn:hover {
+    background: var(--gold-bright);
+    transform: translateY(-2px);
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--carbon);
+    color: var(--cloud);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  footer .contact {
+    margin-bottom: 8px;
+  }
+  footer .contact a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 8px;
+  }
+  footer .contact a:hover { text-decoration: underline; }
+  footer .meta {
+    opacity: 0.6;
+    font-size: 0.78rem;
+    margin-top: 12px;
+  }
+
+  /* Print stylesheet — when the page is printed, hide nav/CTA */
+  @media print {
+    .topnav, .cta { display: none; }
+    .hero { padding: 24px; }
+    .section { padding: 24px 0; }
+    .card { break-inside: avoid; }
+    body { background: var(--cloud); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="topnav">
+  <a href="#top" class="brand">SIRTIKA&trade; <span class="tag">Revenue Growth Architecture</span></a>
+  <div class="nav-links">
+    <a href="#ise">ISE Story</a>
+    <a href="#sales">Sales Story</a>
+    <a href="#legend">Deliverables</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <span class="eyebrow">SALES OPERATING MODEL</span>
+  <h1>Before and After SOM</h1>
+  <p class="subtitle">How the Sales Operating Model transforms the first 30 days and the typical week — for the Internal Sales Executive and the Pipeline Owner.</p>
+  <div class="note">Files marked D01&ndash;D25 are the SIRTIKA deliverables &mdash; the templates, playbooks, and dashboards installed during the SOM engagement.</div>
+</header>
+
+<!-- ============ PAGE 1: ISE ============ -->
+<section class="section" id="ise">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">PAGE 1 OF 2</div>
+      <h2>The ISE Story</h2>
+      <div class="role">Internal Sales Executive &middot; lead generation, outreach, qualification, handover</div>
+    </div>
+
+    <!-- Onboarding -->
+    <div class="compare">
+      <div class="quad without">
+        <div class="quad-header">
+          <span class="label">WITHOUT SOM</span>
+          <span class="phase">Onboarding &middot; First 30 days</span>
+        </div>
+        <div class="quad-body">
+          <div class="chaos-grid">
+            <div class="chaos-item">Shadow whoever's free</div>
+            <div class="chaos-item">Build your own outreach copy</div>
+            <div class="chaos-item">Guess what's &ldquo;qualified&rdquo;</div>
+            <div class="chaos-item">Send a lead via DM</div>
+            <div class="chaos-item">Hope someone owns it</div>
+            <div class="chaos-item">Get told you did it wrong</div>
+          </div>
+          <div class="chaos-footnote">no map. no order. no answer to &ldquo;what next?&rdquo;</div>
+        </div>
+      </div>
+
+      <div class="quad with">
+        <div class="quad-header">
+          <span class="label">WITH SOM</span>
+          <span class="phase">Onboarding &middot; First 30 days</span>
+        </div>
+        <div class="quad-body">
+          <div class="stages stages-3">
+            <div class="stage">
+              <div class="stage-header">
+                <div class="stage-label">LEARN</div>
+                <div class="stage-meta">Days 1&ndash;7</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">1</div><div class="card-title">Read the ICP and tiered account list</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D02</span> ICP &amp; Account List</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">2</div><div class="card-title">Read all buyer personas, mark your top 3</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D03</span> Buyer Persona Maps</div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-header">
+                <div class="stage-label">PRACTICE</div>
+                <div class="stage-meta">Days 8&ndash;17</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">3</div><div class="card-title">Role-play the qualification script</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D04</span> Inside Sales Playbook</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">4</div><div class="card-title">Submit your first handover note to Sales</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D09</span> Pipeline Stage-Gate</div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-header">
+                <div class="stage-label">OPERATE</div>
+                <div class="stage-meta">Days 18&ndash;30</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">5</div><div class="card-title">Send 30 outreach messages, qualify 5</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D04</span> Inside Sales Playbook</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">6</div><div class="card-title">Hand over 3 qualified leads</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D09</span> Pipeline Stage-Gate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Operating -->
+    <div class="compare">
+      <div class="quad without">
+        <div class="quad-header">
+          <span class="label">WITHOUT SOM</span>
+          <span class="phase">Operating &middot; The typical week</span>
+        </div>
+        <div class="quad-body">
+          <div class="chaos-grid">
+            <div class="chaos-item">Pick accounts at random</div>
+            <div class="chaos-item">Improvise outreach copy</div>
+            <div class="chaos-item">Guess at &ldquo;qualified&rdquo;</div>
+            <div class="chaos-item">Slack lead to Sales</div>
+            <div class="chaos-item">Forget dormant leads</div>
+            <div class="chaos-item">No weekly review</div>
+          </div>
+          <div class="chaos-footnote">no map. no order. no answer to &ldquo;what next?&rdquo;</div>
+        </div>
+      </div>
+
+      <div class="quad with">
+        <div class="quad-header">
+          <span class="label">WITH SOM</span>
+          <span class="phase">Operating &middot; The typical week</span>
+        </div>
+        <div class="quad-body">
+          <div class="stages stages-5">
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">PLAN</div><div class="stage-meta">Who &amp; what</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">1</div><div class="card-title">Pick day's Tier-1 targets</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D02</span> ICP &amp; Account List</div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">ENGAGE</div><div class="stage-meta">Reach out</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">2</div><div class="card-title">Send the day's outreach batch</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D04</span> Inside Sales Playbook</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">3</div><div class="card-title">Follow up on warm and no-reply</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D04</span> Inside Sales Playbook</div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">QUALIFY</div><div class="stage-meta">Who's real?</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">4</div><div class="card-title">Run discovery; score against ICP</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D04</span> Inside Sales Playbook</div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">HANDOVER</div><div class="stage-meta">Pass to Sales</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">5</div><div class="card-title">Write handover, move stage</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D09</span> Pipeline Stage-Gate</div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">REVIEW</div><div class="stage-meta">Refresh, repeat</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">6</div><div class="card-title">Re-warm dormant leads</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D04</span> Inside Sales Playbook</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="page-divider"></div></div>
+
+<!-- ============ PAGE 2: SALES ============ -->
+<section class="section" id="sales">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">PAGE 2 OF 2</div>
+      <h2>The Sales Story</h2>
+      <div class="role">Pipeline owner &middot; first meeting, CXO conversation, proposal, closure, governance</div>
+    </div>
+
+    <!-- Onboarding -->
+    <div class="compare">
+      <div class="quad without">
+        <div class="quad-header">
+          <span class="label">WITHOUT SOM</span>
+          <span class="phase">Onboarding &middot; First 30 days</span>
+        </div>
+        <div class="quad-body">
+          <div class="chaos-grid">
+            <div class="chaos-item">Inherit deals with no context</div>
+            <div class="chaos-item">Build your own pitch deck</div>
+            <div class="chaos-item">Wing the first meeting</div>
+            <div class="chaos-item">Reinvent the proposal</div>
+            <div class="chaos-item">Discount on instinct</div>
+            <div class="chaos-item">Get escalated to CEO</div>
+          </div>
+          <div class="chaos-footnote">no map. no order. no answer to &ldquo;what next?&rdquo;</div>
+        </div>
+      </div>
+
+      <div class="quad with">
+        <div class="quad-header">
+          <span class="label">WITH SOM</span>
+          <span class="phase">Onboarding &middot; First 30 days</span>
+        </div>
+        <div class="quad-body">
+          <div class="stages stages-3">
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">LEARN</div><div class="stage-meta">Days 1&ndash;7</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">1</div><div class="card-title">Walk through the Company Deck</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D08</span> Company Deck</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">2</div><div class="card-title">Read the CXO Conversation Playbook</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D05</span> CXO Conversation Playbook</div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">PRACTICE</div><div class="stage-meta">Days 8&ndash;17</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">3</div><div class="card-title">Role-play the first-meeting pitch arc</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D06</span> ISE Pitch Deck</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">4</div><div class="card-title">Draft a mock engagement proposal</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D10</span> Engagement Proposal</div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">OPERATE</div><div class="stage-meta">Days 18&ndash;30</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">5</div><div class="card-title">Run 2 first meetings</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D07</span> Industry Pitch Deck</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">6</div><div class="card-title">Prep and run 1 CXO conversation</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D05</span> CXO Conversation Playbook</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Operating -->
+    <div class="compare">
+      <div class="quad without">
+        <div class="quad-header">
+          <span class="label">WITHOUT SOM</span>
+          <span class="phase">Operating &middot; The typical week</span>
+        </div>
+        <div class="quad-body">
+          <div class="chaos-grid">
+            <div class="chaos-item">Inherit a lead with no context</div>
+            <div class="chaos-item">Pitch from memory</div>
+            <div class="chaos-item">Argue over the pipeline</div>
+            <div class="chaos-item">Watch deals stay stuck</div>
+            <div class="chaos-item">Scramble at month-end</div>
+            <div class="chaos-item">Forget the partner co-sell</div>
+          </div>
+          <div class="chaos-footnote">no map. no order. no answer to &ldquo;what next?&rdquo;</div>
+        </div>
+      </div>
+
+      <div class="quad with">
+        <div class="quad-header">
+          <span class="label">WITH SOM</span>
+          <span class="phase">Operating &middot; The typical week</span>
+        </div>
+        <div class="quad-body">
+          <div class="stages stages-5">
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">PLAN</div><div class="stage-meta">Who &amp; what</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">1</div><div class="card-title">Review pipeline; flag stuck deals</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D09</span> Pipeline Stage-Gate</div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">ENGAGE</div><div class="stage-meta">Meet, pitch</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">2</div><div class="card-title">Run first meeting; log objections</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D12</span> Objection Playbook</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">3</div><div class="card-title">Prep CXO meeting using playbook</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D05</span> CXO Playbook</div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">BUILD</div><div class="stage-meta">Make the offer</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">4</div><div class="card-title">Confirm budget; draft proposal</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D10</span> Engagement Proposal</div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">CLOSE</div><div class="stage-meta">Move forward</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">5</div><div class="card-title">Send proposal; price using matrix</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D11</span> Pricing Guidelines</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">6</div><div class="card-title">Unstick stuck deals</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D13</span> Deal Acceleration Plan</div>
+              </div>
+            </div>
+            <div class="stage">
+              <div class="stage-header"><div class="stage-label">REVIEW</div><div class="stage-meta">Govern, repeat</div></div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">7</div><div class="card-title">Run the Friday Pipeline Review</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D15</span> Weekly Pipeline Review</div>
+              </div>
+              <div class="card">
+                <div class="card-head"><div class="card-num">8</div><div class="card-title">Submit month-end dashboard data</div></div>
+                <div class="card-divider"></div>
+                <div class="card-ref"><span class="ref-code">D19</span> Monthly Dashboard Data Forms</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEGEND ============ -->
+<section class="container" id="legend">
+  <div class="legend">
+    <h3>About the deliverables</h3>
+    <p>Codes <strong>D01&ndash;D25</strong> reference the 25 universal templates in the SIRTIKA Deliverables Checklist (v2.6). Every code maps to a specific document with a named owner and a defined cadence. The kit unfolds across the engagement; the scope is set on day one.</p>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <h2>Want to see what your Sales Operating Model looks like?</h2>
+  <p>SIRTIKA installs the architecture that makes growth predictable. Every engagement starts with a structured diagnostic.</p>
+  <a href="mailto:n.suri@sirtika.com?subject=SIRTIKA%20Diagnosys%20Inquiry" class="btn">Start with the Diagnosys &rarr;</a>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="contact">
+    <a href="mailto:n.suri@sirtika.com">n.suri@sirtika.com</a>
+    <span>&middot;</span>
+    <a href="https://www.sirtika.com">www.sirtika.com</a>
+  </div>
+  <div class="meta">CONFIDENTIAL &middot; &copy; SIRTIKA&trade; Revenue Growth Architecture</div>
+</footer>
+
+</body>
+</html>
